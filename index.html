@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Sofia 🎂</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #fff;
+      text-shadow: 2px 2px 8px #000;
+    }
+
+    p {
+      font-size: 1.5em;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      position: relative;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .yes-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .no-btn {
+      background-color: #dc3545;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Happy Birthday, Sofia! 🎉</h1>
+  <p>Will you go out on a date with me? 💖</p>
+
+  <div class="buttons">
+    <button class="yes-btn" onclick="alert('Yay! I can\'t wait 😍')">Yes</button>
+    <button class="no-btn" id="noBtn">No</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 100);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+  </script>
+
+</body>
+</html>
